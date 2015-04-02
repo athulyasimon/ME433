@@ -109,7 +109,7 @@ int main() {
 
             while (_CP0_GET_COUNT() < 10000000) {
                 int val = readADC();
-                OC1RS = val * (PR2/1024);
+                OC1RS = (val * PR2)/1024;
 
                 if (PORTBbits.RB13 == 1) {
                     // nothing

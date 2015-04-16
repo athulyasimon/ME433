@@ -212,10 +212,10 @@ stack                   0xa0000458         0x7ba0       31648  Reserved for stac
 Discarded input sections
 
  .reginfo       0x00000000       0x18 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/debug-exception-return.o
+ .reginfo       0x00000000       0x18 build/default/production/spi_accel.o
+ .reginfo       0x00000000       0x18 build/default/production/hmwk5.o
  .reginfo       0x00000000       0x18 build/default/production/i2c_display.o
  .reginfo       0x00000000       0x18 build/default/production/i2c_master_int.o
- .reginfo       0x00000000       0x18 build/default/production/hmwk5.o
- .reginfo       0x00000000       0x18 build/default/production/spi_accel.o
  .reginfo       0x00000000       0x18 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX250F128B/default_isr_vectors.o
  .discard       0x00000000       0xb0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX250F128B/default_isr_vectors.o
  .reginfo       0x00000000       0x18 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/pic32_software_reset.o
@@ -293,10 +293,10 @@ Linker script and memory map
 
 LOAD /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX250F128B/crt0_mips32r2.o
 LOAD /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/debug-exception-return.o
+LOAD build/default/production/spi_accel.o
+LOAD build/default/production/hmwk5.o
 LOAD build/default/production/i2c_display.o
 LOAD build/default/production/i2c_master_int.o
-LOAD build/default/production/hmwk5.o
-LOAD build/default/production/spi_accel.o
                 0x00000001                __MPLAB_BUILD = 0x1
 LOAD /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX250F128B/default_isr_vectors.o
 LOAD /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/pic32_software_reset.o
@@ -881,10 +881,10 @@ END GROUP
 
 .mdebug.abi32   0xa0000024        0x0
  *(.mdebug.abi32)
+ .mdebug.abi32  0xa0000024        0x0 build/default/production/spi_accel.o
+ .mdebug.abi32  0xa0000024        0x0 build/default/production/hmwk5.o
  .mdebug.abi32  0xa0000024        0x0 build/default/production/i2c_display.o
  .mdebug.abi32  0xa0000024        0x0 build/default/production/i2c_master_int.o
- .mdebug.abi32  0xa0000024        0x0 build/default/production/hmwk5.o
- .mdebug.abi32  0xa0000024        0x0 build/default/production/spi_accel.o
  .mdebug.abi32  0xa0000024        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .mdebug.abi32  0xa0000024        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
  .mdebug.abi32  0xa0000024        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
@@ -932,11 +932,11 @@ END GROUP
 
 .comment        0x00000000       0x54
  *(.comment)
- .comment       0x00000000       0x3c build/default/production/i2c_display.o
+ .comment       0x00000000       0x3c build/default/production/spi_accel.o
                                  0x3d (size before relaxing)
- .comment       0x00000000       0x3d build/default/production/i2c_master_int.o
  .comment       0x00000000       0x3d build/default/production/hmwk5.o
- .comment       0x00000000       0x3d build/default/production/spi_accel.o
+ .comment       0x00000000       0x3d build/default/production/i2c_display.o
+ .comment       0x00000000       0x3d build/default/production/i2c_master_int.o
  .comment       0x0000003c       0x18 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(memset.o)
                                  0x19 (size before relaxing)
  .comment       0x00000000       0x3d /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
@@ -960,13 +960,13 @@ END GROUP
 .debug_aranges  0x00000000      0x120
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x20 build/default/production/i2c_display.o
+                0x00000000       0x20 build/default/production/spi_accel.o
  .debug_aranges
-                0x00000020       0x20 build/default/production/i2c_master_int.o
+                0x00000020       0x20 build/default/production/hmwk5.o
  .debug_aranges
-                0x00000040       0x20 build/default/production/hmwk5.o
+                0x00000040       0x20 build/default/production/i2c_display.o
  .debug_aranges
-                0x00000060       0x20 build/default/production/spi_accel.o
+                0x00000060       0x20 build/default/production/i2c_master_int.o
  .debug_aranges
                 0x00000080       0x20 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .debug_aranges
@@ -982,13 +982,13 @@ END GROUP
                 0x00000000      0x26a
  *(.debug_pubnames)
  .debug_pubnames
-                0x00000000       0xb7 build/default/production/i2c_display.o
+                0x00000000       0x58 build/default/production/spi_accel.o
  .debug_pubnames
-                0x000000b7       0x64 build/default/production/i2c_master_int.o
+                0x00000058       0x27 build/default/production/hmwk5.o
  .debug_pubnames
-                0x0000011b       0x27 build/default/production/hmwk5.o
+                0x0000007f       0xb7 build/default/production/i2c_display.o
  .debug_pubnames
-                0x00000142       0x58 build/default/production/spi_accel.o
+                0x00000136       0x64 build/default/production/i2c_master_int.o
  .debug_pubnames
                 0x0000019a       0x33 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .debug_pubnames
@@ -1000,24 +1000,24 @@ END GROUP
  .debug_pubnames
                 0x00000242       0x28 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
 
-.debug_info     0x00000000     0x36b0
+.debug_info     0x00000000     0x3628
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000      0x4f4 build/default/production/i2c_display.o
- .debug_info    0x000004f4      0xe5c build/default/production/i2c_master_int.o
- .debug_info    0x00001350     0x1568 build/default/production/hmwk5.o
- .debug_info    0x000028b8      0x9e2 build/default/production/spi_accel.o
- .debug_info    0x0000329a       0xe2 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x0000337c       0xbc /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_info    0x00003438       0xc4 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_info    0x000034fc       0xde /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
- .debug_info    0x000035da       0xd6 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_info    0x00000000      0x9e2 build/default/production/spi_accel.o
+ .debug_info    0x000009e2     0x14e0 build/default/production/hmwk5.o
+ .debug_info    0x00001ec2      0x4f4 build/default/production/i2c_display.o
+ .debug_info    0x000023b6      0xe5c build/default/production/i2c_master_int.o
+ .debug_info    0x00003212       0xe2 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x000032f4       0xbc /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_info    0x000033b0       0xc4 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x00003474       0xde /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
+ .debug_info    0x00003552       0xd6 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
 
 .debug_abbrev   0x00000000      0x545
  *(.debug_abbrev)
- .debug_abbrev  0x00000000      0x101 build/default/production/i2c_display.o
- .debug_abbrev  0x00000101      0x12b build/default/production/i2c_master_int.o
- .debug_abbrev  0x0000022c      0x154 build/default/production/hmwk5.o
- .debug_abbrev  0x00000380      0x10c build/default/production/spi_accel.o
+ .debug_abbrev  0x00000000      0x10c build/default/production/spi_accel.o
+ .debug_abbrev  0x0000010c      0x154 build/default/production/hmwk5.o
+ .debug_abbrev  0x00000260      0x101 build/default/production/i2c_display.o
+ .debug_abbrev  0x00000361      0x12b build/default/production/i2c_master_int.o
  .debug_abbrev  0x0000048c       0x25 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .debug_abbrev  0x000004b1       0x25 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
  .debug_abbrev  0x000004d6       0x25 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
@@ -1026,10 +1026,10 @@ END GROUP
 
 .debug_line     0x00000000      0x6c0
  *(.debug_line)
- .debug_line    0x00000000      0x10d build/default/production/i2c_display.o
- .debug_line    0x0000010d      0x115 build/default/production/i2c_master_int.o
- .debug_line    0x00000222       0xf4 build/default/production/hmwk5.o
- .debug_line    0x00000316       0xdc build/default/production/spi_accel.o
+ .debug_line    0x00000000       0xdc build/default/production/spi_accel.o
+ .debug_line    0x000000dc       0xf4 build/default/production/hmwk5.o
+ .debug_line    0x000001d0      0x10d build/default/production/i2c_display.o
+ .debug_line    0x000002dd      0x115 build/default/production/i2c_master_int.o
  .debug_line    0x000003f2       0x97 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .debug_line    0x00000489       0x84 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
  .debug_line    0x0000050d       0x88 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
@@ -1038,10 +1038,10 @@ END GROUP
 
 .debug_frame    0x00000000      0x350
  *(.debug_frame)
- .debug_frame   0x00000000      0x14c build/default/production/i2c_display.o
- .debug_frame   0x0000014c       0x88 build/default/production/i2c_master_int.o
- .debug_frame   0x000001d4       0x48 build/default/production/hmwk5.o
- .debug_frame   0x0000021c       0x84 build/default/production/spi_accel.o
+ .debug_frame   0x00000000       0x84 build/default/production/spi_accel.o
+ .debug_frame   0x00000084       0x48 build/default/production/hmwk5.o
+ .debug_frame   0x000000cc      0x14c build/default/production/i2c_display.o
+ .debug_frame   0x00000218       0x88 build/default/production/i2c_master_int.o
  .debug_frame   0x000002a0       0x28 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .debug_frame   0x000002c8       0x20 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
  .debug_frame   0x000002e8       0x20 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
@@ -1050,10 +1050,10 @@ END GROUP
 
 .debug_str      0x00000000      0x156
  *(.debug_str)
- .debug_str     0x00000000        0x0 build/default/production/i2c_display.o
- .debug_str     0x00000000       0x47 build/default/production/i2c_master_int.o
- .debug_str     0x00000047       0xbc build/default/production/hmwk5.o
- .debug_str     0x00000103       0x53 build/default/production/spi_accel.o
+ .debug_str     0x00000000       0x53 build/default/production/spi_accel.o
+ .debug_str     0x00000053       0xbc build/default/production/hmwk5.o
+ .debug_str     0x0000010f        0x0 build/default/production/i2c_display.o
+ .debug_str     0x0000010f       0x47 build/default/production/i2c_master_int.o
  .debug_str     0x00000156        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .debug_str     0x00000156        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
  .debug_str     0x00000156        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
@@ -1082,13 +1082,13 @@ END GROUP
                 0x00000000      0x22d
  *(.debug_pubtypes)
  .debug_pubtypes
-                0x00000000       0x12 build/default/production/i2c_display.o
+                0x00000000       0x82 build/default/production/spi_accel.o
  .debug_pubtypes
-                0x00000012       0x6e build/default/production/i2c_master_int.o
+                0x00000082      0x12b build/default/production/hmwk5.o
  .debug_pubtypes
-                0x00000080      0x12b build/default/production/hmwk5.o
+                0x000001ad       0x12 build/default/production/i2c_display.o
  .debug_pubtypes
-                0x000001ab       0x82 build/default/production/spi_accel.o
+                0x000001bf       0x6e build/default/production/i2c_master_int.o
 
 .debug_ranges   0x00000000       0x50
  *(.debug_ranges)
@@ -1102,13 +1102,13 @@ END GROUP
                 0x00000000       0x10
  *(.gnu.attributes)
  .gnu.attributes
-                0x00000000       0x10 build/default/production/i2c_display.o
+                0x00000000       0x10 build/default/production/spi_accel.o
  .gnu.attributes
-                0x00000010       0x10 build/default/production/i2c_master_int.o
+                0x00000010       0x10 build/default/production/hmwk5.o
  .gnu.attributes
-                0x00000020       0x10 build/default/production/hmwk5.o
+                0x00000020       0x10 build/default/production/i2c_display.o
  .gnu.attributes
-                0x00000030       0x10 build/default/production/spi_accel.o
+                0x00000030       0x10 build/default/production/i2c_master_int.o
  .gnu.attributes
                 0x00000040       0x10 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
  .gnu.attributes
@@ -1470,25 +1470,25 @@ LOAD data_init
  .data          0x00000000        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX250F128B/default_isr_vectors.o
 
 .bss%z109       0x00000000        0x0
- .bss           0x00000000        0x0 build/default/production/spi_accel.o
-
-.data%z110      0x00000000        0x0
- .data          0x00000000        0x0 build/default/production/spi_accel.o
-
-.bss%z111       0x00000000        0x0
- .bss           0x00000000        0x0 build/default/production/hmwk5.o
-
-.data%z112      0x00000000        0x0
- .data          0x00000000        0x0 build/default/production/hmwk5.o
-
-.bss%z113       0x00000000        0x0
  .bss           0x00000000        0x0 build/default/production/i2c_master_int.o
 
-.data%z114      0x00000000        0x0
+.data%z110      0x00000000        0x0
  .data          0x00000000        0x0 build/default/production/i2c_master_int.o
 
-.data%z115      0x00000000        0x0
+.data%z111      0x00000000        0x0
  .data          0x00000000        0x0 build/default/production/i2c_display.o
+
+.bss%z112       0x00000000        0x0
+ .bss           0x00000000        0x0 build/default/production/hmwk5.o
+
+.data%z113      0x00000000        0x0
+ .data          0x00000000        0x0 build/default/production/hmwk5.o
+
+.bss%z114       0x00000000        0x0
+ .bss           0x00000000        0x0 build/default/production/spi_accel.o
+
+.data%z115      0x00000000        0x0
+ .data          0x00000000        0x0 build/default/production/spi_accel.o
 
 .bss%z116       0x00000000        0x0
  .bss           0x00000000        0x0 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/debug-exception-return.o

@@ -100,7 +100,7 @@ void i2c_master_setup() {
   IFS1bits.I2C1MIF = 0;            // clear the interrupt flag
   I2C1CONbits.ON = 1;                 // turn on the I2C2 module
 
-   
+
   if(ie & 1) {
     __builtin_enable_interrupts();
   }

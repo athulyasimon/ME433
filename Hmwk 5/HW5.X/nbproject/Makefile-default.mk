@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=i2c_display.c i2c_master_int.c hmwk5.c spi_accel.c
+SOURCEFILES_QUOTED_IF_SPACED=spi_accel.c hmwk5.c i2c_display.c i2c_master_int.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c_display.o ${OBJECTDIR}/i2c_master_int.o ${OBJECTDIR}/hmwk5.o ${OBJECTDIR}/spi_accel.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/i2c_display.o.d ${OBJECTDIR}/i2c_master_int.o.d ${OBJECTDIR}/hmwk5.o.d ${OBJECTDIR}/spi_accel.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/spi_accel.o ${OBJECTDIR}/hmwk5.o ${OBJECTDIR}/i2c_display.o ${OBJECTDIR}/i2c_master_int.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/spi_accel.o.d ${OBJECTDIR}/hmwk5.o.d ${OBJECTDIR}/i2c_display.o.d ${OBJECTDIR}/i2c_master_int.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/i2c_display.o ${OBJECTDIR}/i2c_master_int.o ${OBJECTDIR}/hmwk5.o ${OBJECTDIR}/spi_accel.o
+OBJECTFILES=${OBJECTDIR}/spi_accel.o ${OBJECTDIR}/hmwk5.o ${OBJECTDIR}/i2c_display.o ${OBJECTDIR}/i2c_master_int.o
 
 # Source Files
-SOURCEFILES=i2c_display.c i2c_master_int.c hmwk5.c spi_accel.c
+SOURCEFILES=spi_accel.c hmwk5.c i2c_display.c i2c_master_int.c
 
 
 CFLAGS=
@@ -94,6 +94,18 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/spi_accel.o: spi_accel.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/spi_accel.o.d 
+	@${RM} ${OBJECTDIR}/spi_accel.o 
+	@${FIXDEPS} "${OBJECTDIR}/spi_accel.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spi_accel.o.d" -o ${OBJECTDIR}/spi_accel.o spi_accel.c   
+	
+${OBJECTDIR}/hmwk5.o: hmwk5.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/hmwk5.o.d 
+	@${RM} ${OBJECTDIR}/hmwk5.o 
+	@${FIXDEPS} "${OBJECTDIR}/hmwk5.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/hmwk5.o.d" -o ${OBJECTDIR}/hmwk5.o hmwk5.c   
+	
 ${OBJECTDIR}/i2c_display.o: i2c_display.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/i2c_display.o.d 
@@ -106,19 +118,19 @@ ${OBJECTDIR}/i2c_master_int.o: i2c_master_int.c  nbproject/Makefile-${CND_CONF}.
 	@${RM} ${OBJECTDIR}/i2c_master_int.o 
 	@${FIXDEPS} "${OBJECTDIR}/i2c_master_int.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/i2c_master_int.o.d" -o ${OBJECTDIR}/i2c_master_int.o i2c_master_int.c   
 	
-${OBJECTDIR}/hmwk5.o: hmwk5.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/hmwk5.o.d 
-	@${RM} ${OBJECTDIR}/hmwk5.o 
-	@${FIXDEPS} "${OBJECTDIR}/hmwk5.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/hmwk5.o.d" -o ${OBJECTDIR}/hmwk5.o hmwk5.c   
-	
+else
 ${OBJECTDIR}/spi_accel.o: spi_accel.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/spi_accel.o.d 
 	@${RM} ${OBJECTDIR}/spi_accel.o 
-	@${FIXDEPS} "${OBJECTDIR}/spi_accel.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spi_accel.o.d" -o ${OBJECTDIR}/spi_accel.o spi_accel.c   
+	@${FIXDEPS} "${OBJECTDIR}/spi_accel.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spi_accel.o.d" -o ${OBJECTDIR}/spi_accel.o spi_accel.c   
 	
-else
+${OBJECTDIR}/hmwk5.o: hmwk5.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/hmwk5.o.d 
+	@${RM} ${OBJECTDIR}/hmwk5.o 
+	@${FIXDEPS} "${OBJECTDIR}/hmwk5.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/hmwk5.o.d" -o ${OBJECTDIR}/hmwk5.o hmwk5.c   
+	
 ${OBJECTDIR}/i2c_display.o: i2c_display.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/i2c_display.o.d 
@@ -130,18 +142,6 @@ ${OBJECTDIR}/i2c_master_int.o: i2c_master_int.c  nbproject/Makefile-${CND_CONF}.
 	@${RM} ${OBJECTDIR}/i2c_master_int.o.d 
 	@${RM} ${OBJECTDIR}/i2c_master_int.o 
 	@${FIXDEPS} "${OBJECTDIR}/i2c_master_int.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/i2c_master_int.o.d" -o ${OBJECTDIR}/i2c_master_int.o i2c_master_int.c   
-	
-${OBJECTDIR}/hmwk5.o: hmwk5.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/hmwk5.o.d 
-	@${RM} ${OBJECTDIR}/hmwk5.o 
-	@${FIXDEPS} "${OBJECTDIR}/hmwk5.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/hmwk5.o.d" -o ${OBJECTDIR}/hmwk5.o hmwk5.c   
-	
-${OBJECTDIR}/spi_accel.o: spi_accel.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/spi_accel.o.d 
-	@${RM} ${OBJECTDIR}/spi_accel.o 
-	@${FIXDEPS} "${OBJECTDIR}/spi_accel.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/spi_accel.o.d" -o ${OBJECTDIR}/spi_accel.o spi_accel.c   
 	
 endif
 

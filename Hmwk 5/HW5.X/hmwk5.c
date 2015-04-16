@@ -189,4 +189,3 @@ int readADC(void) {
     a = ADC1BUF0;
     return a;
 }
-

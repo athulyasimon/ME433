@@ -19,6 +19,8 @@ void display_pixel_set(int row, int col, int val); // set the pixel at the given
 
 int display_pixel_get(int row, int col);  // get the pixel at the given row and column
 
-void display_main(char *message, int row_cur, int col_cur); //writes characters to the screen
+void display_text(char *message, int row_cur, int col_cur); //writes characters to the screen
+
+void display_arrow(int x_val, int y_val);        //draws arrow to screen
 
 #endif

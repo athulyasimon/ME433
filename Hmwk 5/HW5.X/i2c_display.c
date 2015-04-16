@@ -229,11 +229,11 @@ void display_arrow(int x_val, int y_val){
     if (y_draw > 0){
         y_direction = -1;
     };
-    
+
     //take absolute value so that value will get smaller in while loop
     x_draw = abs(x_draw);
     y_draw = abs(y_draw);
-    
+
     //will draw a line of pixels at a time, to a length proportional to the value from accelerometer
     int w;
     while(x_draw > 0){
@@ -257,14 +257,3 @@ void display_arrow(int x_val, int y_val){
 
     display_draw(); //draws the image
 }
-
-
-
-
-
-
-
-
-
-
-

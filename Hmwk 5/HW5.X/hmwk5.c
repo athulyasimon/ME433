@@ -104,15 +104,15 @@ int main() {
         //New part for printing message to screen
         display_init();             //initialize display
         display_clear();            //clear scren
-        char message1[20];
-        char message2[20];
-        char message3[20];
-        char message4[20];
-        char message5[20];
-        char message6[20];
+//        char message1[20];
+//        char message2[20];
+//        char message3[20];
+//        char message4[20];
+//        char message5[20];
+//        char message6[20];
 //        int num = 1337;
 //        sprintf(message,"Hello world %d!",num);
-//        display_main(message, 15, 30);      //writes message to screen
+//        display_text(message, 15, 30);      //writes message to screen
 
         acc_setup();
 
@@ -132,24 +132,24 @@ int main() {
             // the accelerations are 16-bit twos compliment numbers, the same as a short
 
             acc_read_register(OUT_X_L_A, (unsigned char *) accels, 6);
-//            sprintf(message1, "accel x: %d", ~accels[0]);
-//            display_main(message1, 10, 10);
+//            sprintf(message1, "accel x: %d", ~accels[0]);     //~ takes the two's compliment
+//            display_text(message1, 10, 10);
 //            sprintf(message4, "accel y: %d", ~accels[1]);
-//            display_main(message4, 20, 10);
+//            display_text(message4, 20, 10);
 //            sprintf(message5, "accel z: %d", ~accels[2]);
-//            display_main(message5, 30, 10);
-              display_arrow(~accels[1], ~accels[0]);
+//            display_text(message5, 30, 10);
+              display_arrow(~accels[1], ~accels[0]);        // display_arrow will draw line on screen
 
             // need to read all 6 bytes in one transaction to get an update.
 
             acc_read_register(OUT_X_L_M, (unsigned char *) mags, 6);
 //            sprintf(message2, "mags: %d", mags[1]);
-//            display_main(message2, 40, 10);
+//            display_text(message2, 40, 10);
             // read the temperature data. Its a right justified 12 bit two's compliment number
 
             acc_read_register(TEMP_OUT_L, (unsigned char *) &temp, 2);
 //            sprintf(message3, "temp: %d", temp);
-//            display_main(message3, 50, 10);
+//            display_text(message3, 50, 10);
             // invert pin every 0.5s, set PWM duty cycle % to the pot voltage output
             //Use the core timer to double check your CPU clock settings
             _CP0_SET_COUNT(0); // set core timer to 0, remember it counts at half the CPU clock

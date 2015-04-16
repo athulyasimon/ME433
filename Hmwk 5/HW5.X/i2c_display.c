@@ -9,7 +9,7 @@
 
 #define SIZE WIDTH*HEIGHT/8 //display size, in bytes
 
-#define SCALE 30/16000 //scaler for length of arrow
+#define SCALE 30/32000 //scaler for length of arrow
 
 
 // lookup table for all of the ascii characters
@@ -178,7 +178,7 @@ int ascii_row(char ch){     //finds the row of the character in the ascii table 
 }
 
 
-void display_main(char *message, int row_cur, int col_cur){
+void display_text(char *message, int row_cur, int col_cur){
     int i = 0, j, k;
     while(message[i]){      //reads through characters in message
         int ch_row = ascii_row(message[i]);     //gets row of character in ascii table
@@ -212,40 +212,47 @@ void display_main(char *message, int row_cur, int col_cur){
 
 void display_arrow(int x_val, int y_val){
     display_clear();
+    //starts at center of board
     int row = 32;
     int col = 64;
 
+    // scales the values to draw a line proportional to the values from accelerometer and still be able to fit on the screen
     int x_draw, y_draw;
     x_draw = x_val*SCALE;
     y_draw = y_val*SCALE;
 
-    int x_direction = 1;
+    //determines direction to draw the line - up, down, left, or right
+    int x_direction = 1, y_direction = 1;
     if (x_draw > 0){
         x_direction = -1;
     };
-
-    int y_direction = 1;
     if (y_draw > 0){
         y_direction = -1;
     };
+    
+    //take absolute value so that value will get smaller in while loop
     x_draw = abs(x_draw);
     y_draw = abs(y_draw);
+    
+    //will draw a line of pixels at a time, to a length proportional to the value from accelerometer
     int w;
     while(x_draw > 0){
-        row = row + 1*x_direction;
-        x_draw = x_draw - 1;
-        for(w = 0; w < 5; w++){
+        row = row + 1*x_direction;          //multiply by x_direction for line to be in the right direction
+        for(w = 0; w < 5; w++){              // draws a thin line 5 pixels wide
            display_pixel_set(row, col+w, 1); //set the pixel value
         };
+        x_draw = x_draw - 1;
     }
+
+    //set the row back to the center of screen
     row = 32;
     int h;
     while(y_draw > 0){
         col = col + 1*y_direction;
-        y_draw = y_draw - 1;
         for(h = 0; h < 5; h++){
            display_pixel_set(row + h, col, 1); //set the pixel value
         };
+        y_draw = y_draw - 1;
     }
 
     display_draw(); //draws the image

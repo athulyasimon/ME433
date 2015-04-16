@@ -1024,17 +1024,17 @@ END GROUP
  .debug_abbrev  0x000004fb       0x25 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
  .debug_abbrev  0x00000520       0x25 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
 
-.debug_line     0x00000000      0x6bf
+.debug_line     0x00000000      0x6c0
  *(.debug_line)
- .debug_line    0x00000000      0x10c build/default/production/i2c_display.o
- .debug_line    0x0000010c      0x115 build/default/production/i2c_master_int.o
- .debug_line    0x00000221       0xf4 build/default/production/hmwk5.o
- .debug_line    0x00000315       0xdc build/default/production/spi_accel.o
- .debug_line    0x000003f1       0x97 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x00000488       0x84 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_line    0x0000050c       0x88 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_line    0x00000594       0x95 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
- .debug_line    0x00000629       0x96 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_line    0x00000000      0x10d build/default/production/i2c_display.o
+ .debug_line    0x0000010d      0x115 build/default/production/i2c_master_int.o
+ .debug_line    0x00000222       0xf4 build/default/production/hmwk5.o
+ .debug_line    0x00000316       0xdc build/default/production/spi_accel.o
+ .debug_line    0x000003f2       0x97 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x00000489       0x84 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_line    0x0000050d       0x88 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x00000595       0x95 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
+ .debug_line    0x0000062a       0x96 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
 
 .debug_frame    0x00000000      0x350
  *(.debug_frame)
@@ -1517,7 +1517,7 @@ LOAD data_init
                 0x9d000238                display_pixel_set
                 0x9d000324                display_pixel_get
                 0x9d000390                ascii_row
-                0x9d0003c4                display_main
+                0x9d0003c4                display_text
                 0x9d000574                display_arrow
  .text          0x9d000774      0x4a0 build/default/production/i2c_master_int.o
                 0x9d000774                I2C1SlaveInterrupt

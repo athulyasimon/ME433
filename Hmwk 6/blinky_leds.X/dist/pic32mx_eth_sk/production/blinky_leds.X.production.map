@@ -1360,24 +1360,24 @@ END GROUP
  .debug_pubnames
                 0x000007c3       0x28 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
 
-.debug_info     0x00000000     0xd418
+.debug_info     0x00000000     0xd2e9
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0x136f build/pic32mx_eth_sk/production/_ext/173564073/sys_clk_static.o
- .debug_info    0x0000136f     0x10c4 build/pic32mx_eth_sk/production/_ext/783931833/sys_ports_static.o
- .debug_info    0x00002433      0xcee build/pic32mx_eth_sk/production/_ext/1373386656/system_init.o
- .debug_info    0x00003121      0xabf build/pic32mx_eth_sk/production/_ext/1373386656/system_tasks.o
- .debug_info    0x00003be0      0xa2a build/pic32mx_eth_sk/production/_ext/1373386656/system_interrupt.o
- .debug_info    0x0000460a      0xb69 build/pic32mx_eth_sk/production/_ext/1360937237/app.o
- .debug_info    0x00005173      0x186 build/pic32mx_eth_sk/production/_ext/1360937237/main.o
- .debug_info    0x000052f9     0x1410 build/pic32mx_eth_sk/production/_ext/850012406/bsp_sys_init.o
- .debug_info    0x00006709     0x1a5d build/pic32mx_eth_sk/production/_ext/1424708930/sys_devcon.o
- .debug_info    0x00008166     0x10de build/pic32mx_eth_sk/production/_ext/1424708930/sys_devcon_pic32mx.o
- .debug_info    0x00009244     0x3dbe build/pic32mx_eth_sk/production/_ext/897464135/sys_ports.o
- .debug_info    0x0000d002       0xe2 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x0000d0e4       0xbc /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
- .debug_info    0x0000d1a0       0xc4 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
- .debug_info    0x0000d264       0xde /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
- .debug_info    0x0000d342       0xd6 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
+ .debug_info    0x0000136f      0xf95 build/pic32mx_eth_sk/production/_ext/783931833/sys_ports_static.o
+ .debug_info    0x00002304      0xcee build/pic32mx_eth_sk/production/_ext/1373386656/system_init.o
+ .debug_info    0x00002ff2      0xabf build/pic32mx_eth_sk/production/_ext/1373386656/system_tasks.o
+ .debug_info    0x00003ab1      0xa2a build/pic32mx_eth_sk/production/_ext/1373386656/system_interrupt.o
+ .debug_info    0x000044db      0xb69 build/pic32mx_eth_sk/production/_ext/1360937237/app.o
+ .debug_info    0x00005044      0x186 build/pic32mx_eth_sk/production/_ext/1360937237/main.o
+ .debug_info    0x000051ca     0x1410 build/pic32mx_eth_sk/production/_ext/850012406/bsp_sys_init.o
+ .debug_info    0x000065da     0x1a5d build/pic32mx_eth_sk/production/_ext/1424708930/sys_devcon.o
+ .debug_info    0x00008037     0x10de build/pic32mx_eth_sk/production/_ext/1424708930/sys_devcon_pic32mx.o
+ .debug_info    0x00009115     0x3dbe build/pic32mx_eth_sk/production/_ext/897464135/sys_ports.o
+ .debug_info    0x0000ced3       0xe2 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x0000cfb5       0xbc /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-reset.o)
+ .debug_info    0x0000d071       0xc4 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x0000d135       0xde /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(default-general-exception-handler.o)
+ .debug_info    0x0000d213       0xd6 /opt/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/libpic32.a(defaultinterrupt.o)
 
 .debug_abbrev   0x00000000      0xf2a
  *(.debug_abbrev)
